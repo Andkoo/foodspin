@@ -47,14 +47,20 @@ const FOOD_CIRCLE_ITEMS = [
   },
 ];
 
+const REVERSE_FOOD_CIRCLE_ITEMS = [
+  FOOD_CIRCLE_ITEMS[0],
+  ...FOOD_CIRCLE_ITEMS.slice(1).reverse(),
+];
+
 export type TFoodCircleItem = typeof FOOD_CIRCLE_ITEMS[number];
 
 const Home = () => {
   const [activeItemIdx, setActiveItemIdx] = useState<number>(0);
   const [direction, setDirection] = useState<number>(0);
 
-  const activeItem =
-    FOOD_CIRCLE_ITEMS[Math.abs(activeItemIdx) % FOOD_CIRCLE_ITEMS.length];
+  const activeItem = (
+    activeItemIdx > 0 ? REVERSE_FOOD_CIRCLE_ITEMS : FOOD_CIRCLE_ITEMS
+  )[Math.abs(activeItemIdx) % FOOD_CIRCLE_ITEMS.length];
 
   const goTo = (skipAmount: number) => {
     setDirection(clamp(-1, 1, skipAmount));
