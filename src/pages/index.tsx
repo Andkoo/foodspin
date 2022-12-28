@@ -47,12 +47,12 @@ const FOOD_CIRCLE_ITEMS = [
   },
 ];
 
+export type TFoodCircleItem = typeof FOOD_CIRCLE_ITEMS[number];
+
 const REVERSE_FOOD_CIRCLE_ITEMS = [
   FOOD_CIRCLE_ITEMS[0],
   ...FOOD_CIRCLE_ITEMS.slice(1).reverse(),
 ];
-
-export type TFoodCircleItem = typeof FOOD_CIRCLE_ITEMS[number];
 
 const Home = () => {
   const [activeItemIdx, setActiveItemIdx] = useState<number>(0);
