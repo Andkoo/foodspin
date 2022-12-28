@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
 
 type TDefaultLayoutProps = {
   children: React.ReactNode;
@@ -64,7 +65,25 @@ const DefaultLayout = ({ children }: TDefaultLayoutProps) => (
           <div className="absolute -right-[2px] -bottom-[1px] h-[6px] w-[6px] rounded-full bg-primary" />
         </div>
       </header>
-      {children}
+
+      <main className="flex flex-col flex-1 w-full">{children}</main>
+
+      <footer className="absolute bottom-0 left-0 right-0 flex justify-end p-4 gap-x-2">
+        <SocialIcon
+          url="https://github.com/Andkoo/foodspin"
+          target="_blank"
+          bgColor="hsl(0, 0%, 80%)"
+          fgColor="hsl(0, 0%, 40%)"
+          className="!h-8 !w-8 opacity-50 transition-opacity hover:opacity-100"
+        />
+        <SocialIcon
+          url="mailto:andrejmikulicka95@gmail.com"
+          target="_blank"
+          bgColor="hsl(0, 0%, 80%)"
+          fgColor="hsl(0, 0%, 40%)"
+          className="!h-8 !w-8 opacity-50 transition-opacity hover:opacity-100"
+        />
+      </footer>
     </div>
   </>
 );

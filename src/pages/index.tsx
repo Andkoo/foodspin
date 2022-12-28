@@ -63,7 +63,7 @@ const Home = () => {
 
   return (
     <DefaultLayout>
-      <main className="container mt-auto">
+      <div className="container m-auto mb-0">
         {/* Content */}
         <div className="flex items-start justify-between">
           {/* Left column */}
@@ -87,7 +87,6 @@ const Home = () => {
                   ${activeItem?.price}
                 </motion.p>
                 <motion.h1
-                  key={activeItemIdx}
                   initial={{ opacity: 0, scale: 0.1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.1 }}
@@ -97,7 +96,6 @@ const Home = () => {
                   {activeItem?.title}
                 </motion.h1>
                 <motion.h2
-                  key={activeItemIdx}
                   initial={{ opacity: 0, scale: 0.1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.1 }}
@@ -200,7 +198,7 @@ const Home = () => {
           {/* End of Right column */}
         </div>
         {/* End of Content */}
-      </main>
+      </div>
     </DefaultLayout>
   );
 };

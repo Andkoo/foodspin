@@ -1,3 +1,9 @@
+# FoodSpin
+
+Frontend coding challenge found on the internet: [Figma link](https://www.figma.com/file/4pXrAZ1J7u6FI73jUZKQJl/foodSpin-interaction?node-id=5%3A581&t=IO6HpR4BfKBjdGNi-0)
+
+Created with [create-t3-app](https://create.t3.gg/)
+
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
